@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <style>
+    text { font-family: Arial, sans-serif; }
+    .title { font-size: 14px; font-weight: bold; }
+    .node { fill: #fff; stroke: #2575fc; stroke-width: 2; }
+    .decision { fill: #fff; stroke: #6a11cb; stroke-width: 2; }
+    .arrow { stroke: #333; stroke-width: 1.5; marker-end: url(#arrow); }
+    .label { font-size: 12px; }
+  </style>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="white"/>
+  
+  <!-- Заголовок -->
+  <text x="10" y="20" class="title">Блок-схема</text>
+  
+  <!-- Начало -->
+  <rect x="200" y="40" width="100" height="40" rx="20" class="node" />
+  <text x="250" y="65" text-anchor="middle">Начало</text>
+  
+  <!-- Процесс 1 -->
+  <rect x="200" y="110" width="100" height="40" class="node" />
+  <text x="250" y="135" text-anchor="middle">Ввод данных</text>
+  
+  <!-- Решение -->
+  <polygon points="250,170 300,200 250,230 200,200" class="decision" />
+  <text x="250" y="205" text-anchor="middle">Проверка</text>
+  
+  <!-- Процесс 2a -->
+  <rect x="100" y="230" width="100" height="40" class="node" />
+  <text x="150" y="255" text-anchor="middle">Обработка A</text>
+  
+  <!-- Процесс 2b -->
+  <rect x="300" y="230" width="100" height="40" class="node" />
+  <text x="350" y="255" text-anchor="middle">Обработка B</text>
+  
+  <!-- Стрелки -->
+  <line x1="250" y1="80" x2="250" y2="110" class="arrow" />
+  <line x1="250" y1="150" x2="250" y2="170" class="arrow" />
+  
+  <line x1="200" y1="200" x2="150" y2="230" class="arrow" />
+  <text x="170" y="210" class="label">Нет</text>
+  
+  <line x1="300" y1="200" x2="350" y2="230" class="arrow" />
+  <text x="330" y="210" class="label">Да</text>
+</svg>

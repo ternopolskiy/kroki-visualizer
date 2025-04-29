@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея примеров | Kroki Визуализатор</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-project-diagram"></i> Kroki Визуализатор</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="editor.html">Редактор</a></li>
+                    <li><a href="gallery.html" class="active">Галерея</a></li>
+                    <li><a href="about.html">О проекте</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-header">
+                    <h2>Галерея примеров</h2>
+                    <p>Изучите примеры диаграмм, созданных с помощью различных синтаксисов через Kroki API</p>
+                </div>
+                
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="plantuml">PlantUML</button>
+                    <button class="filter-btn" data-filter="mermaid">Mermaid</button>
+                    <button class="filter-btn" data-filter="graphviz">GraphViz</button>
+                    <button class="filter-btn" data-filter="c4plantuml">C4 с PlantUML</button>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Элементы галереи будут добавлены с помощью JavaScript -->
+                </div>
+                
+                <div class="gallery-info">
+                    <h3>О Kroki API</h3>
+                    <p>Kroki API предоставляет унифицированный интерфейс для создания диаграмм с использованием различных синтаксисов. Вы можете легко интегрировать эти диаграммы в свои проекты, документацию или презентации.</p>
+                    <p>Формат URL для API: <code>https://kroki.io/{diagram_type}/{output_format}/{encoded_diagram_source}</code></p>
+                    <p>Где:</p>
+                    <ul>
+                        <li><code>{diagram_type}</code> — тип диаграммы (plantuml, mermaid, graphviz и т.д.)</li>
+                        <li><code>{output_format}</code> — формат вывода (svg, png, jpeg, pdf)</li>
+                        <li><code>{encoded_diagram_source}</code> — исходный код диаграммы, закодированный в base64</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kroki Визуализатор. Все права защищены.</p>
+            <p>Powered by <a href="https://kroki.io/" target="_blank">Kroki.io API</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

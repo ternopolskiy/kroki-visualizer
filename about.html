@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте | Kroki Визуализатор</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-project-diagram"></i> Kroki Визуализатор</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="editor.html">Редактор</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="about.html" class="active">О проекте</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <div class="about-header">
+                    <h2>О проекте Kroki Визуализатор</h2>
+                </div>
+                
+                <div class="about-content">
+                    <p>
+                        <strong>Kroki Визуализатор</strong> — это веб-приложение, которое предоставляет удобный интерфейс для работы с API сервиса Kroki.io. 
+                        Наш проект позволяет создавать, редактировать и экспортировать различные типы диаграмм с помощью простого текстового описания.
+                    </p>
+                    
+                    <h3>Что такое Kroki.io?</h3>
+                    <p>
+                        <a href="https://kroki.io/" target="_blank">Kroki.io</a> — это сервис, который предоставляет унифицированный API для создания диаграмм с использованием различных инструментов и синтаксисов. 
+                        Kroki поддерживает множество форматов диаграмм, включая PlantUML, Mermaid, GraphViz, BPMN, C4 и многие другие.
+                    </p>
+                    
+                    <h3>Поддерживаемые типы диаграмм</h3>
+                    <p>
+                        В нашем приложении вы можете создавать следующие типы диаграмм:
+                    </p>
+                    <ul>
+                        <li><strong>PlantUML</strong> — язык для создания UML-диаграмм (диаграммы классов, последовательностей, состояний и др.)</li>
+                        <li><strong>Mermaid</strong> — простой язык разметки для создания диаграмм из текстовых описаний</li>
+                        <li><strong>GraphViz</strong> — инструмент для визуализации структурной информации в виде графов и сетей</li>
+                        <li><strong>C4 с PlantUML</strong> — модель для визуализации архитектуры программного обеспечения</li>
+                        <li><strong>BPMN</strong> — нотация моделирования бизнес-процессов</li>
+                    </ul>
+                    
+                    <h3>Форматы экспорта</h3>
+                    <p>
+                        Вы можете экспортировать созданные диаграммы в следующих форматах:
+                    </p>
+                    <ul>
+                        <li><strong>SVG</strong> — масштабируемая векторная графика, идеально подходит для веб-страниц</li>
+                        <li><strong>PNG</strong> — растровое изображение с поддержкой прозрачности</li>
+                        <li><strong>JPEG</strong> — растровое изображение с высокой степенью сжатия</li>
+                        <li><strong>PDF</strong> — формат для печати и документации</li>
+                    </ul>
+                    
+                    <h3>Как использовать</h3>
+                    <p>
+                        Использование нашего сервиса очень просто:
+                    </p>
+                    <ol>
+                        <li>Перейдите на страницу <a href="editor.html">Редактор</a></li>
+                        <li>Выберите тип диаграммы из выпадающего списка</li>
+                        <li>Введите код диаграммы в текстовое поле (или используйте предложенный пример)</li>
+                        <li>Нажмите кнопку «Визуализировать» для отображения результата</li>
+                        <li>При необходимости выберите формат экспорта и нажмите «Сохранить»</li>
+                    </ol>
+                    
+                    <h3>Примеры</h3>
+                    <p>
+                        Если вы не знаете, с чего начать, посетите нашу <a href="gallery.html">Галерею</a>, где вы найдете примеры различных типов диаграмм. 
+                        Вы можете просмотреть код любого примера и использовать его как основу для своей диаграммы.
+                    </p>
+                    
+                    <h3>Технологии</h3>
+                    <p>
+                        Проект разработан с использованием следующих технологий:
+                    </p>
+                    <ul>
+                        <li>HTML5 для структуры страниц</li>
+                        <li>CSS3 для стилизации и создания адаптивного дизайна</li>
+                        <li>JavaScript для интерактивности и работы с API</li>
+                        <li>API Kroki.io для генерации диаграмм</li>
+                    </ul>
+                    
+                    <h3>Обратная связь</h3>
+                    <p>
+                        Если у вас есть предложения по улучшению сервиса или вы обнаружили ошибку, пожалуйста, сообщите нам об этом через 
+                        <a href="https://github.com/username/kroki-visualizer/issues" target="_blank">GitHub Issues</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kroki Визуализатор. Все права защищены.</p>
+            <p>Powered by <a href="https://kroki.io/" target="_blank">Kroki.io API</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

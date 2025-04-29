@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор диаграмм | Kroki Визуализатор</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-project-diagram"></i> Kroki Визуализатор</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="editor.html" class="active">Редактор</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="about.html">О проекте</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="editor-container">
+            <div class="container">
+                <div class="editor-header">
+                    <h2>Редактор диаграмм</h2>
+                    <p>Создавайте и визуализируйте диаграммы с помощью API Kroki.io</p>
+                </div>
+                
+                <div class="editor-controls">
+                    <select id="diagram-type">
+                        <option value="plantuml">PlantUML</option>
+                        <option value="mermaid">Mermaid</option>
+                        <option value="graphviz">GraphViz</option>
+                        <option value="c4plantuml">C4 с PlantUML</option>
+                        <option value="bpmn">BPMN</option>
+                    </select>
+                    
+                    <select id="output-format">
+                        <option value="svg">SVG</option>
+                        <option value="png">PNG</option>
+                        <option value="jpeg">JPEG</option>
+                        <option value="pdf">PDF</option>
+                    </select>
+                    
+                    <button id="render-button" class="btn primary">
+                        <i class="fas fa-play"></i> Визуализировать
+                    </button>
+                    
+                    <button id="save-button" class="btn secondary">
+                        <i class="fas fa-download"></i> Сохранить
+                    </button>
+                </div>
+                
+                <div class="editor-workspace">
+                    <div class="code-editor">
+                        <textarea id="code-editor" placeholder="Введите код диаграммы здесь..."></textarea>
+                    </div>
+                    
+                    <div class="preview" id="preview">
+                        <div id="loading-indicator" class="loading" style="display: none;"></div>
+                        <img id="preview-image" alt="Предпросмотр диаграммы">
+                    </div>
+                </div>
+                
+                <div class="editor-tips">
+                    <h3>Советы по использованию</h3>
+                    <ul>
+                        <li>Выберите тип диаграммы из выпадающего списка</li>
+                        <li>Введите код диаграммы в текстовое поле</li>
+                        <li>Нажмите кнопку "Визуализировать" для отображения результата</li>
+                        <li>Используйте кнопку "Сохранить" для скачивания диаграммы</li>
+                    </ul>
+                    
+                    <h3>О Kroki API</h3>
+                    <p>Kroki API позволяет создавать диаграммы с помощью текстового описания. Формат URL для API:</p>
+                    <code>https://kroki.io/{diagram_type}/{output_format}/{encoded_diagram_source}</code>
+                    
+                    <h4>Примеры синтаксиса</h4>
+                    <div class="syntax-examples">
+                        <div class="syntax-example">
+                            <h5>PlantUML</h5>
+                            <pre>@startuml
+actor User
+User -> System: Request
+System --> User: Response
+@enduml</pre>
+                        </div>
+                        <div class="syntax-example">
+                            <h5>Mermaid</h5>
+                            <pre>graph TD
+A[Начало] --> B{Условие?}
+B -->|Да| C[Процесс 1]
+B -->|Нет| D[Процесс 2]</pre>
+                        </div>
+                        <div class="syntax-example">
+                            <h5>GraphViz</h5>
+                            <pre>digraph G {
+  rankdir=LR;
+  A -> B -> C;
+  B -> D;
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kroki Визуализатор. Все права защищены.</p>
+            <p>Powered by <a href="https://kroki.io/" target="_blank">Kroki.io API</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
