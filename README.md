@@ -28,7 +28,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/username/kroki-visualizer.git
+   git clone https://github.com/ternopolskiy/kroki-visualizer.git
    cd kroki-visualizer
    ```
 
